@@ -8,12 +8,14 @@ As we all know that managing health care data as well as providing a convenient 
   
   # Technologies Used
   
-  1. Machine Learning</br>
+  1. Machine Learning classifier</br>
   2. Solidity(Ethereum smart contract Language)</br>
   3. Mongodb</br>
   4. Node.js</br>
   5. Numpy
   6. Pandas
+  7. Scikit-learn
+  8. C, C++, Html
   
   
   
