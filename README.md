@@ -1,6 +1,6 @@
 # Telemedicine_HackJaipur
 
-This Project is created for HackJaipur hackathon which focuses mainly in medical field to secure ones own medical history/records, provide good healthcare tips and prescription as well as claim insurance money.
+This Project was created for HackJaipur hackathon which focuses mainly in medical field to secure ones own medical history/records, provide good healthcare tips and prescription as well as claim insurance money.
 
 # Problem it solves
 As we all know that managing health care data as well as providing convinient health care facility for rular people has not been easy.
