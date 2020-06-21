@@ -9,11 +9,11 @@ This Project is created for HackJaipur hackathon which focuses mainly in medical
   
   # Technologies Used
   
-  1.Machine Learning
-  2.Ethereum
-  3.Solidity
-  4.Mongodb
-  5.Node.js
+  1.Machine Learning</br>
+  2.Ethereum</br>
+  3.Solidity</br>
+  4.Mongodb</br>
+  5.Node.js</br>
   
   
   
