@@ -10,12 +10,11 @@ Maintaining and sharing data to healthcare personel as well as insurance bodies 
   # Technologies Used
   
   1. Machine Learning</br>
-  2. Ethereum</br>
-  3. Solidity</br>
-  4. Mongodb</br>
-  5. Node.js</br>
-  6. Numpy
-  7. Pandas
+  2. Solidity(Ethereum smart contract Language)</br>
+  3. Mongodb</br>
+  4. Node.js</br>
+  5. Numpy
+  6. Pandas
   
   
   
