@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        Patient Login
+    </title>
+    <style>
+        #titleBar
+{
+background-color:brown;
+color:white;
+width:100%;
+height:50px;
+}
+#userNameTitleBar
+{
+position: absolute;
+right: 0;
+margin-right:20px;
+}
+body
+{
+font-size:15pt;
+}
+</style>
+</head>
+
+<body>
+    <div id='titleBar'>
+        <h1>Patient Information Portal</h1>
+        <div id='userNameTitleBar'>UserName:maheshb.232</div>
+    </div>
+    <% if(patient[0]) {%>
+    <form action="/patientLogin" method="POST">
+        <h2>Personal Information</h2>
+        <% console.log(patient[0]) %>
+
+        Name:<input name="name" type="text" value="<%= patient[0].name %>"><br>
+        Residential Address:<input name="address" type="text" value="<%= patient[0].address %>"><br>
+        Age:<input name="age" type="text" value="<%= patient[0].age %>"><br>
+        <hr>
+        <h2>Blood Report:</h2>
+        Blood Pressure:<input name="bloodPressure" type="text" value="kfdjlds<%= patient[0].bloodPressure %>"><br>
+        White Blood cell count:<input name="wbcCount" type="text" value="<%= patient[0].wbcCount %>"><br>
+        Haemoglobin:<input name="haemoglobin" type="text" value="<%= patient[0].haemoglobin %>"><br>
+        Red cell count:<input name="rbcCount" type="text" value="<%= patient[0].rbcCount %>"><br>
+        MVC:<input name="mvc" type="text" value="<%= patient[0].mvc %>"><br>
+        MCHC:<input name="mchc" type="text" value="<%= patient[0].mchc %>"><br>
+        Platelet count:<input name="pcount" type="text" value="<%= patient[0].pcount %>"><br>
+        MPV:<input name="mpv" type="text" value="<%= patient[0].mpv %>"><br>
+        <hr>
+        <h2>Cardiac Report</h2>
+        Weight(kilogram):<input name="weight" type="text" value="<%= patient[0].weight %>"><br>
+        Height(meters):<input name="height" type="text" value="<%= patient[0].height %>"><br>
+        Body mass index(kg/m2):<input name="bmi" type="text" value="<%= patient[0].bmi %>"><br>
+        CTR Ratio:<input name="ctrRatio" type="text" value="<%= patient[0].ctrRatio %>"><br>
+        SBP:<input name="sbp" type="text" value="<%= patient[0].sbp %>"><br>
+        DBP:<input name="dbp" type="text" value="<%= patient[0].dbp %>"><br>
+        Pulse Pressure:<input name="pulsePressure" type="text" value="<%= patient[0].pulsePressure %>"><br>
+        Pulse Rate per minute:<input name="pulseRate" type="text" value="<%= patient[0].pulseRate %>"><br>
+        Thyroxin:<input name="thyroxin" type="text" value="<%= patient[0].thyroxin %>"><br>
+        <hr>
+        <h2>General Report:</h2>
+        <h3>Fasting</h3>
+        Blood Sugar Fasting:<input name="bloodSugar" type="text" value="<%= patient[0].bloodSugar %>"><br>
+        Urine Sugar:<input name="urineSugar" type="text" value="<%= patient[0].urineSugar %>"><br>
+        <h3>Bio Chemical Test:</h3>
+        Blood Urine Nitrogen:<input name="bloodUrineNitrogen" type="text" value="<%= patient[0].bloodUrineNitrogen %>"><br>
+        S.Uric Acid:<input name="sUricAcid" type="text" value="<%= patient[0].sUricAcid %>"><br>
+        S.Calcium:<input name="sCalcium" type="text" value="<%= patient[0].sCalcium %>"><br>
+        S.Phosphorus:<input name="sPhosphorus" type="text" value="<%= patient[0].sPhosphorus %>"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <% } %>
+    <% if(!patient[0]) {%>
+    <form action="/patientLogin" method="POST">
+        <h2>Personal Information</h2>
+
+        Name:<input name="name" type="text"><br>
+        Residential Address:<input name="address" type="text"><br>
+        Age:<input name="age" type="text"><br>
+        <hr>
+        <h2>Blood Report:</h2>
+        Blood Pressure:<input name="bloodPressure" type="text"><br>
+        White Blood cell count:<input name="wbcCount" type="text"><br>
+        Haemoglobin:<input name="haemoglobin" type="text"><br>
+        Red cell count:<input name="rbcCount" type="text"><br>
+        MVC:<input name="mvc" type="text"><br>
+        MCHC:<input name="mchc" type="text"><br>
+        Platelet count:<input name="pcount" type="number"><br>
+        MPV:<input name="mpv" type="text"><br>
+        <hr>
+        <h2>Cardiac Report</h2>
+        Weight(kilogram):<input name="weight" type="text"><br>
+        Height(meters):<input name="height" type="text"><br>
+        Body mass index(kg/m2):<input name="bmi" type="text"><br>
+        CTR Ratio:<input name="ctrRatio" type="text"><br>
+        SBP:<input name="sbp" type="text"><br>
+        DBP:<input name="dbp" type="text"><br>
+        Pulse Pressure:<input name="pulsePressure" type="text"><br>
+        Pulse Rate per minute:<input name="pulseRate" type="text"><br>
+        Thyroxin:<input name="thyroxin" type="text"><br>
+        <hr>
+        <h2>General Report:</h2>
+        <h3>Fasting</h3>
+        Blood Sugar Fasting:<input name="bloodSugar" type="text"><br>
+        Urine Sugar:<input name="urineSugar" type="text"><br>
+        <h3>Bio Chemical Test:</h3>
+        Blood Urine Nitrogen:<input name="bloodUrineNitrogen" type="text"><br>
+        S.Uric Acid:<input name="sUricAcid" type="text"><br>
+        S.Calcium:<input name="sCalcium" type="text"><br>
+        S.Phosphorus:<input name="sPhosphorus" type="text"><br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <% } %>
+
+
+</body>
+
+</html>

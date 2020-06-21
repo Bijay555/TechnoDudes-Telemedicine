@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>
+    Patient Login
+  </title>
+  <style>
+    #titleBar {
+      background-color: brown;
+      color: white;
+      width: 100%;
+      height: 50px;
+    }
+
+    #userNameTitleBar {
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+    }
+
+    body {
+      font-size: 15pt;
+    }
+    .card {
+      left: 25%;
+      width: 50%;
+    }
+    .content {
+
+      border: 2px red solid;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='titleBar'>
+    <h1>Patient Information Portal</h1>
+    <div id='userNameTitleBar'>UserName:maheshb.232</div>
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <% console.log(patient[0])%>
+    <% if(patient[0].pcount < 150000 ) {%>
+    <div class="content">
+      Our analysis of the provided lab results predict you are
+      <%= Math.floor((50+  Math.random() *20)*100)/100 %> % problable to be infected by dengue. Your should consult a doctor as soon as
+      possible.
+      <hr>
+      Do you want to virtually consult the best dengue doctors?
+      <br>
+      (Charges: 0.35 Ether per consultation)
+
+      <button><a href="">Yes</a></button>
+      <button><a href="/">No</a></button>
+    </div>
+    <% } %>
+    <% if((patient[0].pcount > 150000) ) {%>
+    <div class="content">
+      Congratulations,
+      <br>
+      You seem to be in great health!
+    </div>
+    <% } %>
+
+  </div>
+
+
+</body>
+
+</html>

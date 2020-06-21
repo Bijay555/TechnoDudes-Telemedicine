@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Telemedicine</title>
+    <script>
+    </script>
+    <style>
+        #doctorLoginPanelMask{
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+position:absolute;
+background-image:url('images/background_copy.png');
+visibility:hidden;
+}
+#doctorLoginPanel{
+color:red;
+height:300px;
+width:500px;
+position:absolute;
+margin:auto;
+left:50%;
+top:50%;
+margin-left:-250px;
+margin-top:-100px;
+background:white;
+border:1px black solid;
+}
+#doctorLoginPanelTitleBar
+{
+width:100%;
+background:black;
+height:25px;
+color:white;
+font-size:13pt;
+padding:1px;
+}
+#patientLoginPanelMask{
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+position:absolute;
+background-image:url('images/background_copy.png');
+visibility:hidden;
+}
+#patientLoginPanel{
+color:red;
+height:300px;
+width:500px;
+position:absolute;
+margin:auto;
+left:50%;
+top:50%;
+margin-left:-250px;
+margin-top:-100px;
+background:white;
+border:1px black solid;
+}
+#patientLoginPanelTitleBar
+{
+width:100%;
+background:black;
+height:25px;
+color:white;
+font-size:13pt;
+padding:1px;
+}
+#patientSignUpPanelMask{
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+position:absolute;
+background-image:url('images/background_copy.png');
+visibility:hidden;
+}
+#patientSignUpPanel{
+color:red;
+height:400px;
+width:500px;
+position:absolute;
+margin:auto;
+left:50%;
+top:50%;
+margin-left:-250px;
+margin-top:-100px;
+background:white;
+border:1px black solid;
+}
+#patientSignUpPanelTitleBar
+{
+width:100%;
+background:black;
+height:25px;
+color:white;
+font-size:13pt;
+padding:1px;
+}
+.patientSignUpTextboxClass
+{
+margin-left:20px;
+height:30px;
+width:300px;
+color:black;
+opacity:1;
+margin-top:20px;
+}
+.patientSignUpTextboxNameClass
+{
+margin-left:20px;
+height:20px;
+width:150px;
+color:black;
+opacity:1;
+margin-top:20px;
+}
+.modalCloseIcon{
+float:right;
+cursor:pointer;
+margin-right:2px;
+}
+.textboxClass
+{
+margin-left:20px;
+height:35px;
+width:300px;
+color:black;
+opacity:1;
+margin-top:20px;
+font-size:15pt;
+}
+.loginFormSubmissionButton
+{
+background-color: #00C5BE;
+border: none;
+color: #fff;
+font-size: 1em;
+padding: 10px 50px;
+text-transform: uppercase;
+font-weight: normal;
+cursor:pointer;
+}
+.loginButtons
+{
+cursor:pointer;
+}
+.signUpClass
+{
+position: absolute;
+right: 0;
+margin-top:0;
+margin-right:20px;
+}
+body
+{
+background-image:url('images/bck.jpg');
+}
+h1
+{
+color:#DC006C;
+font-size:50pt;
+text-shadow: 0 1px 0 #ccc,
+0 2px 0 #c9c9c9,
+0 3px 0 #bbb,
+0 4px 0 #b9b9b9,
+0 5px 0 #aaa,
+0 3px 1px rgba(0,0,0,.1),
+0 0 5px rgba(0,0,0,.1),
+0 1px 3px rgba(0,0,0,.3),
+0 3px 5px rgba(0,0,0,.2),
+0 5px 10px rgba(0,0,0,.25),
+0 5px 10px rgba(0,0,0,.2),
+0 10px 20px rgba(0,0,0,.15);
+}
+.frontPageButtons
+{
+background-color: #00C5BE;
+border: none;
+color: #fff;
+font-size: 1em;
+padding: 10px 50px;
+text-transform: uppercase;
+font-weight: normal;
+cursor:pointer;
+border-radius: 25px;
+}
+</style>
+    <script>
+        function ramu(f)
+{
+var nm1=f.nm1.value;
+var nm2=f.nm2.value;
+if(nm1.length==0 || nm2.length==0)
+{
+return false;
+}
+return true;
+}
+</script>
+</head>
+
+<body>
+    <div class='signUpClass' onclick='javascript:document.getElementById("patientSignUpPanelMask").style.visibility="visible" '><button
+            class='frontPageButtons'>Sign Up</button></div>
+    <h1>
+        <center>Login Page</center>
+    </h1>
+    <div id='patientSignUpPanelMask'>
+        <div id='patientSignUpPanel'>
+            <div id='patientSignUpPanelTitleBar'>&nbsp;SIGNUP MODULE(PATIENT):
+                <img src='images/close_icon.png' class='modalCloseIcon' onclick='javascript:document.getElementById("patientSignUpPanelMask").style.visibility="hidden" '>
+            </div>
+            <form name='patientSignUp' action="patientSignUp" method="GET">
+                <p><input type='textbox' placeholder='First Name' class='patientSignUpTextboxNameClass'>
+                    <input type='textbox' placeholder='Last Name' class='patientSignUpTextboxNameClass'>
+                </p>
+                <p><input type='textbox' placeholder='Enter full residential address' class='patientSignUpTextboxClass'></p>
+                <p><input type='password' placeholder='Enter password' class='patientSignUpTextboxClass'></p>
+                <p><input type='password' placeholder='Confirm password' class='patientSignUpTextboxClass'></p>
+                <center><button class='loginFormSubmissionButton'>Submit</button></center>
+            </form>
+        </div>
+    </div>
+    <div id='doctorLoginPanelMask'>
+        <div id='doctorLoginPanel'>
+            <div id='doctorLoginPanelTitleBar'>&nbsp;LOGIN MODULE(DOCTOR):
+                <img src='images/close_icon.png' class='modalCloseIcon' onclick='javascript:document.getElementById("doctorLoginPanelMask").style.visibility="hidden" '>
+            </div>
+            <form name='doctorLogin' action='doctorLogin' method="GET">
+                <p><input type='textbox' placeholder='Login Id' class='textboxClass'></p>
+                <p><input type='password' placeholder='Password' class='textboxClass'></p>
+                <center><button class='loginFormSubmissionButton' type='submit'>
+                    Submit
+                </center>
+            </form>
+        </div>
+    </div>
+    <div id='patientLoginPanelMask'>
+        <div id='patientLoginPanel'>
+            <div id='patientLoginPanelTitleBar'>&nbsp;LOGIN MODULE(PATIENT):
+                <img src='images/close_icon.png' class='modalCloseIcon' onclick='javascript:document.getElementById("patientLoginPanelMask").style.visibility="hidden" '>
+            </div>
+            <form name='patientLogin' action='patientLogin' method="GET">
+                <p><input type='textbox' placeholder='Login Id' class='textboxClass' name='id'></p>
+                <p><input type='password' placeholder='Password' class='textboxClass' name='password'></p>
+                <center><input type='submit' value='Submit'></center>
+            </form>
+        </div>
+    </div>
+    <p>
+        <center><label id='doctorLoginLabel' width='400px' align='center'>
+                <button type='button' onclick='javascript:document.getElementById("doctorLoginPanelMask").style.visibility="visible" '
+                    class='frontPageButtons'>Doctor's Login</button>
+        </center></label><br>
+    </p>
+    <p>
+        <center><label id='patientLoginLabel' width='400px' float='center'>
+                <button type='button' onclick='javascript:document.getElementById("patientLoginPanelMask").style.visibility="visible" '
+                    class='frontPageButtons'>Patient's Login</button>
+        </center></label>
+    </p>
+    <br>
+    <center> <button type='button' class='frontPageButtons'>Insurance Login</center></button>
+    <link href="https://snatchbot.me/sdk/webchat.css" rel="stylesheet" type="text/css">
+    <script src="https://snatchbot.me/sdk/webchat.min.js"></script>
+    <script>
+        Init('?botID=49432&appID=webchat', 600, 600,
+            'https://dvgpba5hywmpo.cloudfront.net/media/image/r7ehFrFyiDlUDa85BXFKxK2n3', 'bubble', '#00AFF0', 90,
+            90, 62.99999999999999, '', '1', '#FFFFFF', '#FFFFFF', 0); /* for authentication of its users, you can define your userID (add &userID={login}) */
+    </script>
+    <link href="https://snatchbot.me/sdk/webchat.css" rel="stylesheet" type="text/css"><script src="https://snatchbot.me/sdk/webchat.min.js"></script><script> Init('?botID=49432&appID=webchat', 600, 600, 'https://dvgpba5hywmpo.cloudfront.net/media/image/r7ehFrFyiDlUDa85BXFKxK2n3', 'bubble', '#00AFF0', 90, 90, 62.99999999999999, '', '1', '#FFFFFF', '#FFFFFF', 0); /* for authentication of its users, you can define your userID (add &userID={login}) */ </script>
+</body>
+
+</html>
